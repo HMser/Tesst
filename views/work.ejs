@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Adding List For Home</title>
+</head>
+<body>
+   <%- include("static/header.ejs") %>
+   <div class="list" id="inputContainer">
+     <%#<input type="checkbox" class="box" onclick="xyz()">
+   <input type="text" class="input" name="task" id="Input">#%> <div class="y">
+   <h2>Work To-Do List</h2><input type="submit" value="add" class="add" onclick="addList()"><br>
+   </div>
+   </div>
+   <div class="clear"><input type="button" value="Clear" onclick="ClearAll()"></div>
+   <%- include("static/footer.ejs") %>
+   <script>
+     function addList(){
+     const container=document.getElementById("inputContainer");
+     const newInput=document.createElement("input");
+     const brea=document.createElement("br");
+     newInput.setAttribute("type","text");
+     newInput.setAttribute("name","task");
+     newInput.classList.add("input");
+     const newInput2=document.createElement("input");
+     newInput2.setAttribute("type","checkbox");
+     newInput2.classList.add("box");
+     newInput2.addEventListener("change",LineTask);
+     container.appendChild(newInput2);
+     container.appendChild(newInput);
+     container.appendChild(brea);
+     }
+     function LineTask(event){
+        const newInput = event.target.nextElementSibling;
+        if(event.target.checked){
+           newInput.classList.add("X");
+        }
+        else{
+           newInput.classList.remove("X");
+        }
+     }
+     function ClearAll(){
+        const toremove=document.querySelectorAll(".input");
+        toremove.forEach(element=>{
+              element.remove();
+        });
+        const toremove2=document.querySelectorAll(".box");
+        toremove2.forEach(element=>{
+           element.remove();
+        })
+     }
+   </script>
+</body>
+</html>

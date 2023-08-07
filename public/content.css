@@ -42,12 +42,40 @@ h1{
     height: 40px;
     border-radius: 10px;
     font-size: 20px;
+    margin-top: 5px;
 }
 .add{
     width: 60px;
     height: 43px;
     font-size: 24px;
     border-radius: 10px;
-    margin-left: 5px;
+    margin-left: 15px;
     cursor: pointer;
+}
+.X{
+    text-decoration: line-through;
+}
+.box{
+    margin-right: 5px;
+}
+.y{
+    display: flex;
+}
+h2{
+    margin-right: 20px;
+    width: auto;
+}
+.clear{
+    margin-left: auto;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: blue;
 }

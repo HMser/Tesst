@@ -16,6 +16,9 @@ app.post("/add",(req,res)=>{
     res.send("hello");
 })
 app.get("/",(req,res)=>{
+    res.render("index.ejs")
+})
+app.get("/GeneralTask",(req,res)=>{
     const today=new Date();
     let day=today.getDay();
     let date=today.getDate();
@@ -27,6 +30,9 @@ app.get("/",(req,res)=>{
        datetype:date,
        monthtype:dateName[month],
     })
+})
+app.get("/work",(req,res)=>{
+    res.render("work.ejs");
 })
 app.listen(port,()=>{
     console.log("listening on port 3000");
