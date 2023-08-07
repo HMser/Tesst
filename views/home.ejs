@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding List For Home</title>
+ </head>
+ <body>
+    <%- include("static/header.ejs") %>
+    <div class="day"><%=dayType %><%= datetype %><%= monthtype %></div>
+    <div class="list" id="inputContainer">
+    <input type="text" class="input" name="task"><input type="submit" value="add" class="add" onclick="addList()">
+    </div>
+    <%- include("static/footer.ejs") %>
+    <script>
+      function addList(){
+      const container=document.getElementById("inputContainer");
+      const newInput=document.createElement("input");
+      newInput.setAttribute("type","text");
+      newInput.setAttribute("name","task");
+      newInput.classList.add("input");
+      const newInput2=document.createElement("input");
+      newInput2.setAttribute("type","submit");
+      newInput2.setAttribute("value","add");
+      newInput2.classList.add("add");
+      container.appendChild(newInput);
+      }
+    </script>
+ </body>
+ </html>
