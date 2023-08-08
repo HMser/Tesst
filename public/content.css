@@ -2,10 +2,14 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: linear-gradient(235deg,#fbeee6,#ffe5d8);
+}
 h1{
     text-align: center;
     margin-top: 30px;
     font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
 }
 .content_p{
    text-align: center;
@@ -23,7 +27,7 @@ h1{
     width: 200px;
     height: 60px;
     border-radius: 10px;
-    background-color: aqua;
+    background-color: #ffcad4;
     font-size: 1.5rem;
     font-family: 'Times New Roman', Times, serif;
     align-items: center;
@@ -31,7 +35,7 @@ h1{
 }
 .list{
     margin:auto;
-    margin-top: 10px;
+    margin-top:10px;
     width: 400px;
     border-radius: 10px;
     font-size: 20px;
@@ -51,6 +55,19 @@ h1{
     border-radius: 10px;
     margin-left: 15px;
     cursor: pointer;
+    border: none;
+    background-color: #b35667;
+    color: #fbeee6;
+}
+.add1{
+    width: 60px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #b35667;
+    color: #fbeee6;
 }
 .X{
     text-decoration: line-through;
@@ -60,22 +77,29 @@ h1{
 }
 .y{
     display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
 }
 h2{
     margin-right: 20px;
     width: auto;
 }
-.clear{
-    margin-left: auto;
-    width: 60px;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-}
+
+
 a{
     text-decoration: none;
     color: black;
 }
 a:hover{
-    color: blue;
+    color:#b35667;
+}
+.clear{
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
 }

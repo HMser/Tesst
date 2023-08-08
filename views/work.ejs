@@ -7,13 +7,17 @@
 </head>
 <body>
    <%- include("static/header.ejs") %>
+    
    <div class="list" id="inputContainer">
+    
      <%#<input type="checkbox" class="box" onclick="xyz()">
    <input type="text" class="input" name="task" id="Input">#%> <div class="y">
-   <h2>Work To-Do List</h2><input type="submit" value="add" class="add" onclick="addList()"><br>
+   <h2>Work To-Do List</h2><input type="submit" value="add" class="add" onclick="addList()">
+   <div class="clear"><input type="button" value="Clear" class="add1" onclick="ClearAll()"></div>
    </div>
    </div>
-   <div class="clear"><input type="button" value="Clear" onclick="ClearAll()"></div>
+
+  
    <%- include("static/footer.ejs") %>
    <script>
      function addList(){
